@@ -8,3 +8,5 @@ rails db:create
 rails db:migrate
 rails db:seed
 rails s
+
+Aller au http: // localhost: 3000 /
