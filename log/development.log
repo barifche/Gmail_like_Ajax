@@ -1,0 +1,734 @@
+  [1m[35m (89.3ms)[0m  [1m[35mCREATE DATABASE "todolist-app_development" ENCODING = 'unicode'[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE "todolist-app_test" ENCODING = 'unicode'[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (17.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (11.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (608.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "todolist-app_development"[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (406.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "todolist-app_test"[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (2591.5ms)[0m  [1m[35mCREATE DATABASE "todolist-app_development" ENCODING = 'unicode'[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (1177.4ms)[0m  [1m[35mCREATE DATABASE "todolist-app_test" ENCODING = 'unicode'[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (315.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (232.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(34377518426153490)[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to DeviseCreateUsers (20181115104424)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (124.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181115104424_devise_create_users.rb:5
+  [1m[35m (69.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20181115104424_devise_create_users.rb:39
+  [1m[35m (56.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20181115104424_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181115104424"]]
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (25.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateCategories (20181115131426)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (123.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181115131426_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181115131426"]]
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (31.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateTasks (20181116110123)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (111.6ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "title" character varying, "status" boolean DEFAULT FALSE, "deadline" timestamp, "category_id" bigint)[0m
+  ↳ db/migrate/20181116110123_create_tasks.rb:3
+  [1m[35m (56.6ms)[0m  [1m[35mCREATE  INDEX  "index_tasks_on_category_id" ON "tasks"  ("category_id")[0m
+  ↳ db/migrate/20181116110123_create_tasks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181116110123"]]
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (31.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to AddImagetoTask (20181116110124)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "tasks" ADD "image" character varying[0m
+  ↳ db/migrate/20181116110124_add_imageto_task.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181116110124"]]
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (38.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateEmails (20191121141104)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (107.8ms)[0m  [1m[35mCREATE TABLE "emails" ("id" bigserial primary key, "object" character varying, "body" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191121141104_create_emails.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191121141104"]]
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (31.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-28 02:23:25.888922"], ["updated_at", "2020-08-28 02:23:25.888922"]]
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (26.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(34377518426153490)[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281
+Started GET "/" for ::1 at 2020-08-28 04:23:58 +0200
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.2ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:38
+  Rendered emails/index.html.erb within layouts/application (27.5ms)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb___1104034620871379072_20160 at /home/barifche/Gmail_like_ajax/app/views/layouts/application.html.erb:8)
+  Rendered layouts/_navbar.html.erb (8.6ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 16973ms (Views: 16897.5ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/tasks/new" for ::1 at 2020-08-28 04:25:06 +0200
+Processing by TasksController#new as HTML
+Completed 401 Unauthorized in 204ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-28 04:25:11 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (99.7ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+  Rendered layouts/_flash.html.erb (0.7ms)
+Completed 200 OK in 313ms (Views: 247.2ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-08-28 04:25:29 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__3109007075910574968_20820 at /home/barifche/Gmail_like_ajax/app/views/devise/registrations/new.html.erb:4)
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (19.5ms)
+  Rendered layouts/_navbar.html.erb (3.3ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 126ms (Views: 123.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-08-28 04:25:51 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1vUox6iKupHT6spcerqK++TSws3VpRrYLiY28iNsY3Awf7lcaUnLuqLZpOPN2TllytLj0yx1DoK0JReAZCOo3g==", "user"=>{"email"=>"rifbache@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (307.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rifbache@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (185.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "rifbache@gmail.com"], ["encrypted_password", "$2a$11$eKeF1yG7QWoGbmD7MEqcTOf8HQtCpFVtY6MVAKVcUZ993CDlMtBKG"], ["created_at", "2020-08-28 02:25:52.308538"], ["updated_at", "2020-08-28 02:25:52.308538"]]
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (44.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/tasks/new
+Completed 302 Found in 1208ms (ActiveRecord: 538.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2020-08-28 04:25:52 +0200
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered layouts/_task_form.html.erb (2.6ms)
+  Rendered tasks/new.html.erb within layouts/application (113.7ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 400ms (Views: 227.8ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:00 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"réserver un ticket de conecert ", "commit"=>"Create task"}
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (5.2ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "drive collaborative e-services"], ["body", "Lauretta Gibson"], ["created_at", "2020-08-28 02:27:00.058664"], ["updated_at", "2020-08-28 02:27:00.058664"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (58.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 169ms (ActiveRecord: 70.4ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:05 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"réserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (1.1ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "orchestrate innovative niches"], ["body", "Rep. Ryann Moen"], ["created_at", "2020-08-28 02:27:05.555024"], ["updated_at", "2020-08-28 02:27:05.555024"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (100.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 160ms (ActiveRecord: 102.2ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:09 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"réserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (3.2ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "architect world-class functionalities"], ["body", "Coletta Schaefer"], ["created_at", "2020-08-28 02:27:09.702974"], ["updated_at", "2020-08-28 02:27:09.702974"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (67.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 168ms (ActiveRecord: 71.9ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:10 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"réserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (3.5ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "grow revolutionary e-markets"], ["body", "Rubin Friesen"], ["created_at", "2020-08-28 02:27:10.547840"], ["updated_at", "2020-08-28 02:27:10.547840"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (70.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 131ms (ActiveRecord: 74.2ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:11 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"réserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (4.4ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "reinvent interactive eyeballs"], ["body", "Willow Cremin"], ["created_at", "2020-08-28 02:27:11.902187"], ["updated_at", "2020-08-28 02:27:11.902187"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (55.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 143ms (ActiveRecord: 62.1ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:12 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"réserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (0.8ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "maximize bricks-and-clicks users"], ["body", "Edythe Lehner"], ["created_at", "2020-08-28 02:27:12.366326"], ["updated_at", "2020-08-28 02:27:12.366326"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (46.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 133ms (ActiveRecord: 47.5ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:12 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"réserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (4.0ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "grow next-generation partnerships"], ["body", "Prof. Alfonso Quigley"], ["created_at", "2020-08-28 02:27:12.716054"], ["updated_at", "2020-08-28 02:27:12.716054"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (26.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 97ms (ActiveRecord: 30.4ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:12 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"réserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (0.7ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "synthesize customized schemas"], ["body", "Dr. Leigha Jerde"], ["created_at", "2020-08-28 02:27:12.903531"], ["updated_at", "2020-08-28 02:27:12.903531"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (28.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 130ms (ActiveRecord: 29.6ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:13 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"réserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (2.9ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "redefine cross-media e-services"], ["body", "Miss Royce Pollich"], ["created_at", "2020-08-28 02:27:13.095571"], ["updated_at", "2020-08-28 02:27:13.095571"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 93ms (ActiveRecord: 35.1ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:25 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"reserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (3.3ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "e-enable plug-and-play convergence"], ["body", "Sammie Pacocha"], ["created_at", "2020-08-28 02:27:25.970720"], ["updated_at", "2020-08-28 02:27:25.970720"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 101ms (ActiveRecord: 28.2ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:27 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"reserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (0.7ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "morph integrated bandwidth"], ["body", "Carisa Fisher"], ["created_at", "2020-08-28 02:27:27.192249"], ["updated_at", "2020-08-28 02:27:27.192249"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (30.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 122ms (ActiveRecord: 31.1ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:27 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"reserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (1.2ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "deliver vertical architectures"], ["body", "Josiah Veum"], ["created_at", "2020-08-28 02:27:27.872702"], ["updated_at", "2020-08-28 02:27:27.872702"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (38.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 124ms (ActiveRecord: 43.9ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:28 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"reserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (9.7ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "incubate revolutionary experiences"], ["body", "The Hon. Thurman Bartoletti"], ["created_at", "2020-08-28 02:27:28.461943"], ["updated_at", "2020-08-28 02:27:28.461943"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (43.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 145ms (ActiveRecord: 54.2ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:38 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"reserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (4.9ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "strategize plug-and-play schemas"], ["body", "Lida Beer Esq."], ["created_at", "2020-08-28 02:27:38.653487"], ["updated_at", "2020-08-28 02:27:38.653487"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (32.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 114ms (ActiveRecord: 38.8ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:46 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"reserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (1.1ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "reinvent seamless functionalities"], ["body", "Loren Gorczany Sr."], ["created_at", "2020-08-28 02:27:46.923131"], ["updated_at", "2020-08-28 02:27:46.923131"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 103ms (ActiveRecord: 26.2ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:47 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"concert", "deadline"=>"reserver un ticket de concert ", "commit"=>"Create task"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (2.5ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "deploy dynamic schemas"], ["body", "Edgardo Hagenes"], ["created_at", "2020-08-28 02:27:47.696017"], ["updated_at", "2020-08-28 02:27:47.696017"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (43.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 124ms (ActiveRecord: 47.4ms)
+
+
+Started GET "/tasks/new" for ::1 at 2020-08-28 04:27:49 +0200
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered layouts/_task_form.html.erb (2.1ms)
+  Rendered tasks/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 183ms (Views: 173.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/new" for ::1 at 2020-08-28 04:27:50 +0200
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered layouts/_task_form.html.erb (3.1ms)
+  Rendered tasks/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.7ms)
+Completed 200 OK in 143ms (Views: 136.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:56 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"", "deadline"=>"réserver un ticket de conecert ", "commit"=>"Create task"}
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (1.1ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "drive B2B solutions"], ["body", "Janette Volkman"], ["created_at", "2020-08-28 02:27:56.971038"], ["updated_at", "2020-08-28 02:27:56.971038"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (44.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 110ms (ActiveRecord: 47.4ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:27:58 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "title"=>"", "deadline"=>"réserver un ticket de conecert ", "commit"=>"Create task"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (0.6ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "exploit virtual convergence"], ["body", "Christopher Hessel"], ["created_at", "2020-08-28 02:27:58.304456"], ["updated_at", "2020-08-28 02:27:58.304456"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 91ms (ActiveRecord: 28.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-28 04:28:00 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DjKuz7okehkbKySmxoJcV1XssL1KyeepEBB6vzqSvkPk2mPqmsximR65RZA6ul4kMhD9wTqoFv9zWdt6Ftl18A=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 663ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-28 04:28:01 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (5.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:38
+  Rendered emails/index.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_navbar.html.erb (8.3ms)
+  Rendered layouts/_flash.html.erb (1.3ms)
+Completed 200 OK in 137ms (Views: 123.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-28 04:28:24 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (10.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_navbar.html.erb (3.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 150ms (Views: 147.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-28 04:28:39 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w3OQCu03/843T+9KRMptaxfcwmNoKw6/xy6wtHrYBKOq9+kDVx2sQdKqPSy5wW8ppeJwYGi8SpIaScK/DUTOdg==", "user"=>{"email"=>"rifbache@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "rifbache@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 285ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-28 04:28:39 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (3.1ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:38
+  Rendered emails/index.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:9
+  Rendered layouts/_navbar.html.erb (4.4ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 116ms (Views: 110.0ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:28:55 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "commit"=>"Recevoir un email"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (1.2ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "harness 24/7 mindshare"], ["body", "Chantay Runte LLD"], ["created_at", "2020-08-28 02:28:55.838253"], ["updated_at", "2020-08-28 02:28:55.838253"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (99.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 170ms (ActiveRecord: 100.6ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:28:58 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "commit"=>"Recevoir un email"}
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (1.9ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "facilitate rich supply-chains"], ["body", "Ute Kuhlman"], ["created_at", "2020-08-28 02:28:58.735141"], ["updated_at", "2020-08-28 02:28:58.735141"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (51.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 146ms (ActiveRecord: 55.3ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:29:00 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "commit"=>"Recevoir un email"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (0.9ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "reinvent bleeding-edge infrastructures"], ["body", "The Hon. Roberta Thompson"], ["created_at", "2020-08-28 02:29:00.665830"], ["updated_at", "2020-08-28 02:29:00.665830"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (72.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 153ms (ActiveRecord: 73.7ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:29:01 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "commit"=>"Recevoir un email"}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (1.7ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "optimize 24/365 metrics"], ["body", "Ms. Dorsey Langworth"], ["created_at", "2020-08-28 02:29:01.265635"], ["updated_at", "2020-08-28 02:29:01.265635"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (36.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 121ms (ActiveRecord: 39.8ms)
+
+
+Started GET "/tasks/new" for ::1 at 2020-08-28 04:29:03 +0200
+Processing by TasksController#new as HTML
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered layouts/_task_form.html.erb (10.0ms)
+  Rendered tasks/new.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 133ms (Views: 116.8ms | ActiveRecord: 6.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-28 04:29:06 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QBJqPbne5leWHUBwtkg0DQ7irZmv8xVO9x8UVjbWN8/C73/7SblSxpyc9skxekzNlTlHv8NJUykkBjM0kYvXhA=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /var/lib/gems/2.7.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-08-28 04:29:06 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:38
+  Rendered emails/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 113ms (Views: 109.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-28 04:29:08 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (3.4ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:38
+  Rendered emails/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 122ms (Views: 117.5ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:29:30 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "commit"=>"Recevoir un email"}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (0.9ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "harness e-business web-readiness"], ["body", "Andrea Cummings"], ["created_at", "2020-08-28 02:29:30.620353"], ["updated_at", "2020-08-28 02:29:30.620353"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (56.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 123ms (ActiveRecord: 58.6ms)
+
+
+Started GET "/tasks/new" for ::1 at 2020-08-28 04:29:32 +0200
+Processing by TasksController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-28 04:29:32 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (6.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 85ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-08-28 04:29:35 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__3109007075910574968_24380 at /home/barifche/Gmail_like_ajax/app/views/devise/registrations/new.html.erb:4)
+  Rendered devise/shared/_links.html.erb (3.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_navbar.html.erb (4.6ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 110ms (Views: 105.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-28 04:29:36 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.4ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+Completed 200 OK in 123ms (Views: 118.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-28 04:29:37 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (2.4ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:38
+  Rendered emails/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_navbar.html.erb (6.1ms)
+  Rendered layouts/_flash.html.erb (1.1ms)
+Completed 200 OK in 147ms (Views: 142.4ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:30:21 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "commit"=>"Recevoir un email"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (1.9ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "syndicate impactful communities"], ["body", "Pearlie Sporer"], ["created_at", "2020-08-28 02:30:21.292797"], ["updated_at", "2020-08-28 02:30:21.292797"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (31.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 108ms (ActiveRecord: 34.0ms)
+
+
+Started POST "/emails" for ::1 at 2020-08-28 04:30:35 +0200
+Processing by EmailsController#create as JS
+  Parameters: {"utf8"=>"✓", "commit"=>"Recevoir un email"}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[36mEmail Create (1.2ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "seize plug-and-play experiences"], ["body", "Fr. Eldridge Weber"], ["created_at", "2020-08-28 02:30:35.857974"], ["updated_at", "2020-08-28 02:30:35.857974"]]
+  ↳ app/controllers/emails_controller.rb:7
+  [1m[35m (52.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:7
+No template found for EmailsController#create, rendering head :no_content
+Completed 204 No Content in 131ms (ActiveRecord: 55.6ms)
+
+
+Started GET "/tasks/new" for ::1 at 2020-08-28 04:30:38 +0200
+Processing by TasksController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-28 04:30:38 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_navbar.html.erb (3.5ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 157ms (Views: 154.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-08-28 04:30:39 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__3109007075910574968_25080 at /home/barifche/Gmail_like_ajax/app/views/devise/registrations/new.html.erb:4)
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.6ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 123ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-28 04:30:40 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 120ms (Views: 116.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-28 04:30:42 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (2.9ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:38
+  Rendered emails/index.html.erb within layouts/application (18.9ms)
+  Rendered layouts/_navbar.html.erb (5.5ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 143ms (Views: 134.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-28 04:47:08 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (80.2ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:38
+  Rendered emails/index.html.erb within layouts/application (112.9ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_flash.html.erb (1.1ms)
+Completed 200 OK in 1920ms (Views: 1789.7ms | ActiveRecord: 80.2ms)
+
+
